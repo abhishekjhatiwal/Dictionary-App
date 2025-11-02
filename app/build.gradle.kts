@@ -8,9 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.dictionaryapp"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.dictionaryapp"
@@ -43,11 +41,11 @@ android {
     }
 }
 
-buildscript {
-    dependencies {
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.52")
-    }
-}
+//buildscript {
+//    dependencies {
+//        classpath("com.google.dagger:hilt-android-gradle-plugin:2.52")
+//    }
+//}
 
 dependencies {
     implementation(libs.androidx.core.ktx)
@@ -78,9 +76,15 @@ dependencies {
     // Use the latest stable version
 
     // Hilt main dependencies
-    implementation("com.google.dagger:hilt-android:2.52")
-    kapt("com.google.dagger:hilt-compiler:2.52")
+    // Hilt
+    implementation("com.google.dagger:hilt-android:2.55")
+    kapt("com.google.dagger:hilt-android-compiler:2.55")
+
+    // Compose Integration
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+
+    // Fix metadata version mismatch
+    implementation("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.9.0")
 
     // Core Kotlin Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
