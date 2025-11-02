@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.example.dictionaryapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.dictionaryapp"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -38,6 +38,17 @@ android {
     }
     buildFeatures {
         compose = true
+    }
+
+    packaging {
+        resources {
+            excludes += listOf(
+                "META-INF/versions/9/OSGI-INF/MANIFEST.MF",
+                "META-INF/LICENSE",
+                "META-INF/DEPENDENCIES",
+                "META-INF/NOTICE"
+            )
+        }
     }
 }
 
@@ -66,14 +77,10 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:3.0.0")
-    // Use the latest stable version
-    // Converter for JSON (e.g., GSON)
-    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
-    // Use the latest stable version
-    // Optional: OkHttp logging interceptor for network request logging
-    implementation("com.squareup.okhttp3:logging-interceptor:5.3.0")
-    // Use the latest stable version
+    // ✅ Retrofit (use version 2.x)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.14")
 
     // Hilt main dependencies
     // Hilt

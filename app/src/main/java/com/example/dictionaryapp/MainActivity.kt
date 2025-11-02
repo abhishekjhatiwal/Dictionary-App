@@ -32,7 +32,9 @@ import com.example.dictionaryapp.presentation.MainUiEvents
 import com.example.dictionaryapp.presentation.MainState
 import com.example.dictionaryapp.ui.theme.DictionaryAppTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
