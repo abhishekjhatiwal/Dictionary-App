@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="128dp"
+    android:height="128dp"
+    android:viewportWidth="512"
+    android:viewportHeight="512">
+
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#26C6DA"
+        android:pathData="M256,512A256,256 0 1,1 512,256A256,256 0 0,1 256,512Z" />
+
+    <!-- Book -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M128,128h160a16,16 0,0 1,16 16v224a16,16 0,0 1,-16 16H128a16,16 0,0 1,-16 -16V144A16,16 0,0 1,128 128Z" />
+
+    <path
+        android:fillColor="#F5F5F5"
+        android:pathData="M144,144h128v208H144z" />
+
+    <!-- Book spine line -->
+    <path
+        android:fillColor="#B0BEC5"
+        android:strokeWidth="4"
+        android:pathData="M176,144v208" />
+
+    <!-- Magnifying glass handle -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M350,350l60,60a12,12 0,0 1,-17 17l-60,-60a88,88 0,1 1,17 -17Z" />
+
+    <!-- Magnifying glass circle -->
+    <path
+        android:fillColor="#90CAF9"
+        android:pathData="M304,224a64,64 0,1 1,-64 -64A64,64 0,0 1,304 224Z" />
+
+</vector>
